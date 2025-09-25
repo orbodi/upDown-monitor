@@ -30,8 +30,8 @@ def update_devices_status(request):
         for device in Device.objects.all():
             try:
                 result = subprocess.run(
-                    ["ping", "-n", "1", "-w", "1000", device.ip_address],
-                    stdout=subprocess.DEVNULL
+                    ["ping", "-c", "1", "-W", "1000", device.ip_address], # Use "-c" and "-W" for Unix-based systems like Linux and macOS (e.g., Linux, macOS)# Use "-n" and "-w" for Windows (e.g., Windows)
+                    stdout=subprocess.DEVNULL 
                 )
                 device.status = "UP" if result.returncode == 0 else "DOWN"
                 device.save()
