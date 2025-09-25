@@ -15,7 +15,6 @@ Rafraîchissement automatique pour suivre l’évolution en direct.
 
 Liste configurable d’équipements ou serveurs à surveiller.
 
-Historique et logs des états pour analyse ultérieure.
 
 Léger, facile à déployer, sans dépendances lourdes.
 
@@ -25,6 +24,5 @@ Django pour le backend et la gestion des modèles.
 
 Bootstrap pour le dashboard visuel.
 
-Python ping3 ou subprocess pour les pings.
+Python subprocess pour les pings.
 
-Optionnel : Celery pour planification automatique des pings.
