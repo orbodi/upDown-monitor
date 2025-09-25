@@ -146,11 +146,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = BASE_DIR / 'staticfiles'  
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",   # dis à Django où chercher les fichiers
+]
+STATIC_ROOT = BASE_DIR / "staticfiles"
+ 
 
 
 # Default primary key field type
