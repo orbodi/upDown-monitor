@@ -1,28 +1,77 @@
-UpDown Monitor
+🚦 UpDown Monitor
 
-UpDown Monitor est un outil simple et efficace de supervision réseau qui permet de surveiller en temps réel l’état des équipements.
-Il effectue des pings réguliers vers les adresses IP configurées et affiche les résultats sur un dashboard clair :
+UpDown Monitor est un outil simple et efficace de supervision réseau qui permet de surveiller en temps réel l’état des équipements et serveurs.
 
-✅ UP : l’équipement répond au ping.
+L’application effectue des pings réguliers vers les adresses IP configurées et affiche les résultats sur un dashboard clair et dynamique.
 
-❌ DOWN : aucune réponse, l’équipement est considéré comme hors ligne.
+✨ Fonctionnalités
 
-Fonctionnalités principales
+📊 Dashboard visuel avec interfaces colorées :
 
-Dashboard visuel avec interfaces colorées : vert = UP, rouge = DOWN.
+🟢 UP → l’équipement répond au ping
 
-Rafraîchissement automatique pour suivre l’évolution en direct.
+🔴 DOWN → aucune réponse (hors ligne)
 
-Liste configurable d’équipements ou serveurs à surveiller.
+🔄 Rafraîchissement automatique : suivi en direct de l’évolution des statuts.
+
+📋 Liste configurable d’équipements/serveurs à surveiller.
+
+⚡ Léger et facile à déployer : pas de dépendances lourdes.
+
+🛠️ Technologies utilisées
+
+Django → backend et gestion des modèles.
+
+Bootstrap → interface web responsive et intuitive.
+
+Python (subprocess) → exécution des pings système.
+
+🚀 Installation
+1. Cloner le projet
+git clone https://github.com/ton-compte/updown-monitor.git
+cd updown-monitor
+
+2. Créer un environnement virtuel et installer les dépendances
+python -m venv venv
+source venv/bin/activate   # Linux/macOS
+venv\Scripts\activate      # Windows
+
+pip install -r requirements.txt
+
+3. Lancer le serveur Django
+python manage.py migrate
+python manage.py runserver
 
 
-Léger, facile à déployer, sans dépendances lourdes.
+Accéder ensuite à l’application :
+👉 http://localhost:8000
 
-Technologie utilisée
+🐳 Déploiement avec Docker
+Construire l’image
+docker build -t updown-monitor .
 
-Django pour le backend et la gestion des modèles.
+Lancer le conteneur
+docker run -p 8000:8000 updown-monitor
 
-Bootstrap pour le dashboard visuel.
 
-Python subprocess pour les pings.
+L’application sera disponible sur :
+👉 http://localhost:8000
 
+📸 Aperçu du Dashboard
+
+(Tu peux ajouter une capture d’écran ici pour rendre le README plus parlant)
+
+📌 Roadmap / Améliorations possibles
+
+Support d’autres méthodes de supervision (TCP check, HTTP check).
+
+Export des résultats (CSV/JSON).
+
+Intégration d’alertes (email, Slack, Telegram).
+
+Authentification et gestion des utilisateurs.
+
+📄 Licence
+
+Projet open-source sous licence MIT.
+Libre à vous de l’utiliser, le modifier et le partager.
