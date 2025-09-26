@@ -6,52 +6,52 @@ L’application effectue des pings réguliers vers les adresses IP configurées 
 
 ✨ Fonctionnalités
 
-📊 Dashboard visuel avec interfaces colorées :
+    📊 Dashboard visuel avec interfaces colorées :
 
-🟢 UP → l’équipement répond au ping
+    🟢 UP → l’équipement répond au ping
 
-🔴 DOWN → aucune réponse (hors ligne)
+    🔴 DOWN → aucune réponse (hors ligne)
 
-🔄 Rafraîchissement automatique : suivi en direct de l’évolution des statuts.
+    🔄 Rafraîchissement automatique : suivi en direct de l’évolution des statuts.
 
-📋 Liste configurable d’équipements/serveurs à surveiller.
+    📋 Liste configurable d’équipements/serveurs à surveiller.
 
-⚡ Léger et facile à déployer : pas de dépendances lourdes.
+    ⚡ Léger et facile à déployer : pas de dépendances lourdes.
 
 🛠️ Technologies utilisées
 
-Django → backend et gestion des modèles.
+    - Django → backend et gestion des modèles.
 
-Bootstrap → interface web responsive et intuitive.
+    - Bootstrap → interface web responsive et intuitive.
 
-Python (subprocess) → exécution des pings système.
+    - Python (subprocess) → exécution des pings système.
 
 🚀 Installation
-1. Cloner le projet
-git clone https://github.com/ton-compte/updown-monitor.git
-cd updown-monitor
+    1. Cloner le projet
+        git clone https://github.com/ton-compte/updown-monitor.git
+        cd updown-monitor
 
-2. Créer un environnement virtuel et installer les dépendances
-python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
+    2. Créer un environnement virtuel et installer les dépendances: python -m venv venv
 
-pip install -r requirements.txt
+        - source venv/bin/activate   # Linux/macOS
+        - venv\Scripts\activate      # Windows
 
-3. Lancer le serveur Django
-python manage.py migrate
-python manage.py runserver
+        - pip install -r requirements.txt
+
+    3. Lancer le serveur Django
+        - python manage.py migrate
+        - python manage.py runserver
 
 
 Accéder ensuite à l’application :
 👉 http://localhost:8000
 
 🐳 Déploiement avec Docker
-Construire l’image
-docker build -t updown-monitor .
+    1. Construire l’image
+        docker build -t updown-monitor .
 
-Lancer le conteneur
-docker run -p 8000:8000 updown-monitor
+    2. Lancer le conteneur
+        docker run -p 8000:8000 updown-monitor
 
 
 L’application sera disponible sur :
@@ -59,17 +59,18 @@ L’application sera disponible sur :
 
 📸 Aperçu du Dashboard
 
-(Tu peux ajouter une capture d’écran ici pour rendre le README plus parlant)
+Voici l’interface principale d’UpDown Monitor :
+
+![Dashboard UpDown Monitor](docs/dashboard.png)
+
 
 📌 Roadmap / Améliorations possibles
 
-Support d’autres méthodes de supervision (TCP check, HTTP check).
+    - Support d’autres méthodes de supervision (TCP check, HTTP check).
 
-Export des résultats (CSV/JSON).
+    - Export des résultats (CSV/JSON).
 
-Intégration d’alertes (email, Slack, Telegram).
-
-Authentification et gestion des utilisateurs.
+    - Authentification et gestion des utilisateurs.
 
 📄 Licence
 
